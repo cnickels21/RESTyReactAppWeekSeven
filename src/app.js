@@ -18,11 +18,15 @@ class App extends React.Component {
     }
   }
 
+  setResults = results => {
+    this.setState({ results });
+  }
+
   render() {
     return (
       <React.Fragment>
         <Header />
-        <Index />
+        <Index onReceiveData={this.setResults}/>
         <Footer />
       </React.Fragment>
     );
