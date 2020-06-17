@@ -1,6 +1,6 @@
 {
   "name": "class-26-solution",
-  
+  "homepage": "https://cnickels21.github.io/RESTyReactAppWeekSeven ",
   "version": "1.0.0",
   "description": "",
   "keywords": [],
@@ -17,8 +17,8 @@
     "gh-pages": "^3.0.0"
   },
   "scripts": {
-    
-    
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
