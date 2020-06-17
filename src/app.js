@@ -9,6 +9,15 @@ import Footer from './components/footer';
 import Index from './components/index';
 
 class App extends React.Component {
+  constructor(props){
+    super(props);
+
+    this.state = {
+      count: 0,
+      results: [],
+    }
+  }
+
   render() {
     return (
       <React.Fragment>
