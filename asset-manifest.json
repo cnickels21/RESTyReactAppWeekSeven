@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/RESTyReactAppWeekSeven%20/static/css/main.f24ae757.chunk.css",
+    "main.js": "/RESTyReactAppWeekSeven%20/static/js/main.0b3e4eda.chunk.js",
+    "main.js.map": "/RESTyReactAppWeekSeven%20/static/js/main.0b3e4eda.chunk.js.map",
+    "runtime-main.js": "/RESTyReactAppWeekSeven%20/static/js/runtime-main.3ff2afa3.js",
+    "runtime-main.js.map": "/RESTyReactAppWeekSeven%20/static/js/runtime-main.3ff2afa3.js.map",
+    "static/js/2.e37d5b6a.chunk.js": "/RESTyReactAppWeekSeven%20/static/js/2.e37d5b6a.chunk.js",
+    "static/js/2.e37d5b6a.chunk.js.map": "/RESTyReactAppWeekSeven%20/static/js/2.e37d5b6a.chunk.js.map",
+    "index.html": "/RESTyReactAppWeekSeven%20/index.html",
+    "precache-manifest.603c70128784929213a0741559ff1afe.js": "/RESTyReactAppWeekSeven%20/precache-manifest.603c70128784929213a0741559ff1afe.js",
+    "service-worker.js": "/RESTyReactAppWeekSeven%20/service-worker.js",
+    "static/css/main.f24ae757.chunk.css.map": "/RESTyReactAppWeekSeven%20/static/css/main.f24ae757.chunk.css.map",
+    "static/js/2.e37d5b6a.chunk.js.LICENSE.txt": "/RESTyReactAppWeekSeven%20/static/js/2.e37d5b6a.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.3ff2afa3.js",
+    "static/js/2.e37d5b6a.chunk.js",
+    "static/css/main.f24ae757.chunk.css",
+    "static/js/main.0b3e4eda.chunk.js"
+  ]
+}
