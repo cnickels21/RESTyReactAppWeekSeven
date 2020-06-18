@@ -29,7 +29,7 @@ class App extends React.Component {
       <React.Fragment>
         <Header />
         <Index onReceiveData={this.setResults}/>
-        <Results />
+        <Results header={this.state.header} body={this.state.body}/>
         <Footer />
       </React.Fragment>
     );
