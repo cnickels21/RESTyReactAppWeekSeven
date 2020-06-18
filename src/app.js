@@ -7,7 +7,7 @@ import './app.scss';
 import Header from './components/header';
 import Footer from './components/footer';
 import Index from './components/index';
-import Results from './components/results';
+import Results from './components/results/results';
 
 class App extends React.Component {
   constructor(props){
