@@ -10,8 +10,6 @@ export default function Results(props) {
     //         body: props.body,
     //     }
     // }
-
-    render() {
         return (
             <>
                 <div>
@@ -25,6 +23,5 @@ export default function Results(props) {
                 </div>
             </>
         )
-    }
 
 }
