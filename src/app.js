@@ -18,8 +18,8 @@ class App extends React.Component {
     }
   }
 
-  setResults = results => {
-    this.setState({ results });
+  setResults = apiResults => {
+    this.setState({ results: apiResults });
   }
 
   render() {

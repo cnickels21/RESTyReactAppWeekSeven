@@ -10,10 +10,11 @@ class Index extends React.Component {
       url: '',
       method: '',
       request: {},
+      dataReturn: props.onReceiveData,
     };
   }
 
-  handleSubmit = e => {
+  handleSubmit = async e => {
     e.preventDefault();
 
     if ( this.state.url && this.state.method ) {
@@ -23,6 +24,11 @@ class Index extends React.Component {
         url: this.state.url,
         method: this.state.method,
       };
+
+      let results = await fetch(request.url);
+      let body = await results.json();
+
+      this.props.onReceiveData(body);
 
       // Clear old settings
       let url = '';
@@ -55,7 +61,7 @@ class Index extends React.Component {
           <label >
             <span>URL: </span>
             <input name='url' type='text' onChange={this.handleChangeURL} />
-            <button type="submit">GO!</button>
+            <button type="submit" >GO!</button>
           </label>
           <label className="methods">
             <span className={this.state.method === 'get' ? 'active' : ''} id="get" onClick={this.handleChangeMethod}>GET</span>
