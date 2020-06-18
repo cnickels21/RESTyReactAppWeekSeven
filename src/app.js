@@ -7,6 +7,7 @@ import './app.scss';
 import Header from './components/header';
 import Footer from './components/footer';
 import Index from './components/index';
+import Results from './components/results';
 
 class App extends React.Component {
   constructor(props){
@@ -28,6 +29,7 @@ class App extends React.Component {
       <React.Fragment>
         <Header />
         <Index onReceiveData={this.setResults}/>
+        <Results />
         <Footer />
       </React.Fragment>
     );
