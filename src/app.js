@@ -14,14 +14,16 @@ class App extends React.Component {
     super(props);
 
     this.state = {
-      count: 0,
-      header: null,
+      headers: null,
       body: null,
     }
   }
 
-  setResults = apiResults => {
-    this.setState({ results: apiResults });
+  setResults = (body, headers) => {
+    this.setState({ 
+      body,
+      headers,
+     });
   }
 
   render() {
@@ -29,7 +31,7 @@ class App extends React.Component {
       <React.Fragment>
         <Header />
         <Index onReceiveData={this.setResults}/>
-        <Results header={this.state.header} body={this.state.body}/>
+        <Results headers={this.state.headers} body={this.state.body}/>
         <Footer />
       </React.Fragment>
     );
