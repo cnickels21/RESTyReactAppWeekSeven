@@ -16,6 +16,7 @@ class Form extends React.Component {
 
   handleSubmit = async e => {
     e.preventDefault();
+    let form = e.target;
 
     if ( this.state.url && this.state.method ) {
 
@@ -27,16 +28,17 @@ class Form extends React.Component {
 
       let results = await fetch(request.url);
       let body = await results.json();
+      let headers = {};
+      headers = [...results.headers.entries()];
 
-      this.props.onReceiveData(body);
+      this.props.onReceiveData(body, headers);
 
       // Clear old settings
       let url = '';
       let method = '';
 
       this.setState({request, url, method});
-      e.target.reset();
-
+      form.reset();
     }
 
     else {
