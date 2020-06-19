@@ -2,7 +2,7 @@ import React from 'react';
 
 import './index.scss';
 
-class Index extends React.Component {
+class Form extends React.Component {
 
   constructor(props) {
     super(props);
@@ -10,11 +10,13 @@ class Index extends React.Component {
       url: '',
       method: '',
       request: {},
+      dataReturn: props.onReceiveData,
     };
   }
 
-  handleSubmit = e => {
+  handleSubmit = async e => {
     e.preventDefault();
+    let form = e.target;
 
     if ( this.state.url && this.state.method ) {
 
@@ -24,13 +26,19 @@ class Index extends React.Component {
         method: this.state.method,
       };
 
+      let results = await fetch(request.url);
+      let body = await results.json();
+      let headers = {};
+      headers = [...results.headers.entries()];
+
+      this.props.onReceiveData(body, headers);
+
       // Clear old settings
       let url = '';
       let method = '';
 
       this.setState({request, url, method});
-      e.target.reset();
-
+      form.reset();
     }
 
     else {
@@ -55,7 +63,7 @@ class Index extends React.Component {
           <label >
             <span>URL: </span>
             <input name='url' type='text' onChange={this.handleChangeURL} />
-            <button type="submit">GO!</button>
+            <button type="submit" >GO!</button>
           </label>
           <label className="methods">
             <span className={this.state.method === 'get' ? 'active' : ''} id="get" onClick={this.handleChangeMethod}>GET</span>
@@ -73,4 +81,4 @@ class Index extends React.Component {
   }
 }
 
-export default Index;
+export default Form;
