@@ -2,7 +2,7 @@ import React from 'react';
 
 import './index.scss';
 
-class Index extends React.Component {
+class Form extends React.Component {
 
   constructor(props) {
     super(props);
@@ -79,4 +79,4 @@ class Index extends React.Component {
   }
 }
 
-export default Index;
+export default Form;

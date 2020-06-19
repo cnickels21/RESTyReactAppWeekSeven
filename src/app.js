@@ -6,7 +6,7 @@ import './app.scss';
 // There's pros and cons for each way of doing this ...
 import Header from './components/header';
 import Footer from './components/footer';
-import Index from './components/index';
+import Form from './components/form';
 import Results from './components/results/results';
 
 class App extends React.Component {
@@ -30,7 +30,7 @@ class App extends React.Component {
     return (
       <React.Fragment>
         <Header />
-        <Index onReceiveData={this.setResults}/>
+        <Form onReceiveData={this.setResults}/>
         <Results headers={this.state.headers} body={this.state.body}/>
         <Footer />
       </React.Fragment>
