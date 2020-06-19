@@ -1,4 +1,5 @@
 import React from 'react';
+import { Switch, Route } from 'react-router-dom';
 
 import './app.scss';
 
@@ -29,10 +30,14 @@ class App extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <Header />
-        <Form onReceiveData={this.setResults}/>
-        <Results headers={this.state.headers} body={this.state.body}/>
-        <Footer />
+        <Switch>
+          <Header />
+          <Route exact path="/">
+            <Form onReceiveData={this.setResults}/>
+          </Route>
+          <Results headers={this.state.headers} body={this.state.body}/>
+          <Footer />
+        </Switch>
       </React.Fragment>
     );
   }
