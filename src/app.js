@@ -31,17 +31,17 @@ class App extends React.Component {
   render() {
     return (
       <React.Fragment>
+        <Header />
         <Switch>
-          <Header />
           <Route exact path="/">
             <Form onReceiveData={this.setResults}/>
           </Route>
           <Route exact path="/history">
             <History/>
           </Route>
-          <Results headers={this.state.headers} body={this.state.body}/>
-          <Footer />
         </Switch>
+        <Results headers={this.state.headers} body={this.state.body}/>
+        <Footer />
       </React.Fragment>
     );
   }
