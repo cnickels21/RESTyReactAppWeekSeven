@@ -1,4 +1,5 @@
 import React from 'react';
+import { Switch, Route } from 'react-router-dom';
 
 import './app.scss';
 
@@ -8,6 +9,7 @@ import Header from './components/header';
 import Footer from './components/footer';
 import Form from './components/form';
 import Results from './components/results';
+import History from './components/history';
 
 class App extends React.Component {
   constructor(props){
@@ -30,7 +32,14 @@ class App extends React.Component {
     return (
       <React.Fragment>
         <Header />
-        <Form onReceiveData={this.setResults}/>
+        <Switch>
+          <Route exact path="/">
+            <Form onReceiveData={this.setResults}/>
+          </Route>
+          <Route exact path="/history">
+            <History/>
+          </Route>
+        </Switch>
         <Results headers={this.state.headers} body={this.state.body}/>
         <Footer />
       </React.Fragment>

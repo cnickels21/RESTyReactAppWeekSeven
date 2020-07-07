@@ -34,11 +34,15 @@ class Form extends React.Component {
       this.props.onReceiveData(body, headers);
 
       // Clear old settings
-      let url = '';
-      let method = '';
+      let url = request.url;
+      let method = request.method;
 
       this.setState({request, url, method});
       form.reset();
+
+      window.localStorage.url = JSON.stringify(url);
+      window.localStorage.method = JSON.stringify(method);
+      window.localStorage.body = JSON.stringify(body);
     }
 
     else {
